@@ -25,10 +25,9 @@ class Config(object):
         self.weight = torch.FloatTensor([1.0,1.0]).to(self.device)
 
         # number of training epochs
-        self.num_epochs = 3
+        self.num_epochs = 10
         self.batch_size = 64                                           # size of batch
-        # max sequence size
-        self.learning_rate = 1e-5                                       # learning rate
+
 
 
 class Encoder(nn.Module):
@@ -58,24 +57,6 @@ class Encoder(nn.Module):
         for enc_layer in self.layer_stack:
             enc_input = enc_layer(enc_input, enc_abs_pos, theta_indexs, slf_attn_mask=mask)
         # input: b x len x d_model
-        # output: b x len x 3
+        # output: b x len x 2
         output = F.softmax(self.output_layer(enc_input), dim=-1)
         return output
-
-
-        #   len x len x 2
-        #       2: [0, 1]: same branch, [1, 0]: different branch
-        # mask: b x len x len
-        #   len = 4
-        #   real_len = 2
-        #   4 x 4 = 16
-        #      
-        # [
-        #     [1, 1, 0 (masked), 0 (masked)],
-        #     [],
-        #     [],
-        #     []
-        # ]
-        
-        # t(i): avg_sec between two tweet in a conversation
-
