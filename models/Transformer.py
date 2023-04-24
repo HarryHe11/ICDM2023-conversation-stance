@@ -26,8 +26,6 @@ class Config(object):
 
         # number of training epochs
         self.num_epochs = 3
-        # patience for early stopping
-        self.patience = 3
         self.batch_size = 64                                           # size of batch
         # max sequence size
         self.learning_rate = 1e-5                                       # learning rate
