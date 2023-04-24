@@ -18,7 +18,6 @@ class Config(object):
 
         # label list
         self.class_list = range(2)
-        # number of labels                       # number of label classes
         self.num_classes = len(self.class_list)
         self.save_path = dataset_path + '/saved_dict/' + self.model_name + '.ckpt'
         self.device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')        # devices
