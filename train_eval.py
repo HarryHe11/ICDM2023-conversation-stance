@@ -22,7 +22,7 @@ def train(config, model, train_iter, dev_iter, test_iter):
     print("epoch: ", config.num_epochs)
     print("batch_per_epoch: ", batch_per_epoch)
     print("output_batch: ", output_batch)
-    require_improvement = output_batch * 5
+    require_improvement = output_batch * 15
     print("require_improvement: ", require_improvement)
     flag = False  # 记录是否很久没有效果提升
     model.train()
