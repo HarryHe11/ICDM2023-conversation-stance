@@ -9,26 +9,26 @@ class Config(object):
 
     """配置参数"""
     def __init__(self, dataset):
-        self.model_name = 'TextCNN'
-        self.train_path = dataset + '/data/train.txt'                                # 训练集
-        self.dev_path = dataset + '/data/dev.txt'                                    # 验证集
-        self.test_path = dataset + '/data/test.txt'                                  # 测试集
-        self.class_list = [0,1]                                                      # 类别名单
-        self.save_path = dataset + '/saved_dict/' + self.model_name + '.ckpt'        # 模型训练结果
-        self.device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')   # 设备
+        self.model_name = 'TAN'
+        self.train_path = dataset + '/data/train.txt'                                
+        self.dev_path = dataset + '/data/dev.txt'                                    
+        self.test_path = dataset + '/data/test.txt'                                 
+        self.class_list = [0,1]                                                      
+        self.save_path = dataset + '/saved_dict/' + self.model_name + '.ckpt'        
+        self.device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')   
 
         self.weights = torch.tensor([1.0, 1.0])
-        self.dropout = 0.1                                              # 随机失活
-        self.require_improvement = 1000                                 # 若超过1000batch效果还没提升，则提前结束训练
-        self.num_classes = len(self.class_list)                         # 类别数
-        self.n_vocab = 0                                                # 词表大小，在运行时赋值
-        self.num_epochs = 20                                            # epoch数
-        self.batch_size = 128                                           # mini-batch大小
-        self.pad_size = 32                                              # 每句话处理成的长度(短填长切)
-        self.learning_rate = 1e-4                                      # 学习率
-        self.embed = 300           # 字向量维度
-        self.hidden_size = 256                                          # lstm隐藏层
-        self.num_layers = 2                                             # lstm层数
+        self.dropout = 0.1                                             
+        self.require_improvement = 1000                                 
+        self.num_classes = len(self.class_list)                         
+        self.n_vocab = 0                                                
+        self.num_epochs = 20                                          
+        self.batch_size = 128                                          
+        self.pad_size = 32                                            
+        self.learning_rate = 1e-4                                   
+        self.embed = 300           
+        self.hidden_size = 256                                        
+        self.num_layers = 2                                        
         self.hidden_size2 = 128
 
 class Model(nn.Module):
