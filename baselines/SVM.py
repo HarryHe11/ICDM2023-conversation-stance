@@ -4,7 +4,7 @@ from tqdm import tqdm
 from sklearn.metrics import classification_report, accuracy_score, f1_score
 # assume X_train and y_train are the training data
 # assume X_test is the test data
-data_path = r'D:\HKU\MM2023\baselines\BERT_based\twitter\data'
+data_path = r'./data'
 train_path = data_path + '/train.txt'
 test_path = data_path + '/test.txt'
 X_train = []
