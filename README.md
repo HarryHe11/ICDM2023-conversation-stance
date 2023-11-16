@@ -1,4 +1,4 @@
-# mm2023-conversation-stance
+# ICDM2023-conversation-stance
 
 ## Overview
 Codes for the accepted paper in ICDM 2023: "Contextual Target-Specific Stance Detection on Twitter: New Dataset and Method". It includes the implementation of the ConMulAttn model and the necessary scripts for training and testing.
