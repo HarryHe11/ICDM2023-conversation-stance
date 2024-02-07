@@ -26,3 +26,17 @@ To run baselines:
 ```
 python "baselines/run.py" --model %MODEL_NAME%
 ```
+
+## Citation
+If you utilize this repository or dataset, please consider citing our paper presented at ICDM 2023.
+```
+@INPROCEEDINGS{10415673,
+  author={Li, Yupeng and Wen, Dacheng and He, Haorui and Guo, Jianxiong and Ning, Xuan and Lau, Francis C. M.},
+  booktitle={2023 IEEE International Conference on Data Mining (ICDM)}, 
+  title={Contextual Target-Specific Stance Detection on Twitter: Dataset and Method}, 
+  year={2023},
+  pages={359-367},
+  keywords={Social networking (online);Blogs;Oral communication;Market research;Real-time systems;Vaccines;Context modeling;Dataset;Target-Specific Stance Detection;Conversation Context},
+  doi={10.1109/ICDM58522.2023.00045}
+  }
+```
